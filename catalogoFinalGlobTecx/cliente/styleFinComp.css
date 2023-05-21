@@ -1,0 +1,130 @@
+/* * Estilos del cuerpo Principal */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* * FONDO DEL CUERPO */
+body {
+    min-height: 100%;
+    background: url('../img/fondoFinCompra.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h3 {
+    color: #52ff8b;
+}
+
+/* * NAVBAR */
+
+.navbar {
+    background: transparent;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 30px rgba(102, 102, 102, 0.801);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.navbar .container-fluid .navbar-brand {
+    display: flex;
+    align-items: center;
+    color: #29ff70;
+    font-family: "mononoki", 'Courier New', Courier, monospace;
+    font-size: 24px;
+
+}
+
+/* * ENCABEZADO */
+
+/* ? Titulo */
+.title-carr {
+    padding-top: 20px;
+    padding-left: 20px;
+    font-family: "Signika Negative", sans-serif, "Franklin Gothic Medium",
+        "Arial Narrow", Arial, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    color: #29ff70;
+}
+
+/* * PARTE DE LA LISTA DE COMPRAS */
+
+/* ? Fondo del producto */
+.card {
+    position: relative;
+    background: transparent;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.548);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+/* ? Imágenes de la lista de los productos a comprar */
+#productos img {
+    align-content: center;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ? Precio Antes del Descuento */
+.dsct {
+    color: #432c3957;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ? % de descuento */
+.dsct span {
+    color: #432c39;
+}
+
+/* ? Tachar el precio antes del descuento */
+.dsct em {
+    color: #432c3934;
+    text-decoration: line-through;
+}
+
+/* ? Precio Original */
+.precio {
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.alert {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+/* * SECCIÓN DEL TOTAL */
+
+#cuerpoTotal {
+    background: transparent;
+    backdrop-filter: blur(15px);
+    background-color: rgba(255, 255, 255, 0.548);
+    overflow: hidden;
+    margin-left: -30px;
+    margin-top: -50px;
+}
+
+/* ? Botón Eliminar */
+.btnEliminarPr {
+    text-align: center;
+}
+
+/* ? Botón Pagar */
+.btnPagar {
+    margin: 10px;
+    text-align: center;
+}

@@ -1,0 +1,124 @@
+/* * Style de cuerpo principal */
+* {
+  margin: 3;
+  padding: 20;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: rgb(0, 255, 0);
+  text-align: center;
+  font-style: italic;
+  font-size: 6ch;
+  margin-bottom: 2ch;
+}
+
+h2 {
+  color: yellow;
+}
+
+h3,
+h4 {
+  color: white;
+}
+
+span {
+  color: rgb(243, 97, 97);
+  font-size: 12px;
+}
+
+label,
+p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(83, 228, 90);
+}
+
+em {
+  color: rgba(118, 255, 63, 0.596);
+}
+
+/* * Parte del formulario */
+
+/* ? Se Definió el Color de Fondo de la Página */
+.todo {
+  /* background: linear-gradient(-225deg,
+      #0d0820 0%,
+      #1f0936 29%,
+      #8d133c 67%,
+      #969111 100%); */
+  background: #171717 url('https://images.unsplash.com/photo-1600004853937-857d1070d505?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80') no-repeat center;
+}
+
+/* ? Parte General del Formulario (Texto-Borde-Fuente) */
+.form-completo {
+  width: 1000px;
+  padding: 50px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 150px;
+  font-family: "mononoki", "Fira Code", monospace, "calibri", "Courier New",
+    Courier, monospace, "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(0.9rem);
+  /*For Safari, firefox does not support this type of effect yet */
+  -webkit-backdrop-filter: blur(0.9rem);
+}
+
+/* ? Parte Dónde Se Pondrán Los Datos Del Remitente */
+.datos {
+  color: rgba(255, 255, 255, 0.678);
+  background-color: rgba(0, 0, 0, 0.363);
+  width: 250px;
+  height: 30px;
+  font-size: 1em;
+  border-radius: 10px;
+}
+
+/* ? Sección para escribir los detalles extras */
+.detalles {
+  color: rgba(255, 255, 255, 0.678);
+  background-color: rgba(0, 0, 0, 0.363);
+  width: 450px;
+  height: 30px;
+  font-size: 1em;
+  border-radius: 10px;
+}
+
+/* ? Texto Donde Se Sube Archivos */
+.archi {
+  color: rgba(255, 255, 255, 0.678);
+  width: 450px;
+}
+
+/* ? Texto Para Ir al término y condiciones */
+.condi {
+  color: rgb(251, 255, 0);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+/* ? Botón De Enviar Consulta */
+.button {
+  color: rgb(255, 255, 255);
+  font-size: x-large;
+  background-color: rgba(0, 0, 0, 0.363);
+  width: 250px;
+  height: 50px;
+  border-radius: 50px;
+}
+
+/* ? Logo Final */
+.logo {
+  text-align: center;
+}
+
+/* * Style de la página de agradecimiento.html */
+
+/* ? Texto De Volver Al Incio */
+.ini {
+  color: #43e97b;
+  font-size: 29px;
+  font-family: "mononoki", "Fira Code", monospace, "Franklin Gothic Medium",
+    "Arial Narrow", Arial, sans-serif;
+}

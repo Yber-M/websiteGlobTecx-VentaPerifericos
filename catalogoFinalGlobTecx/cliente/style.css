@@ -1,0 +1,458 @@
+/* * Estilos del cuerpo Principal */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* ? Definimos La Fuente Por Defecto */
+
+h1 {
+    padding-top: 20px;
+    font-family: "Signika Negative", sans-serif, "Franklin Gothic Medium",
+        "Arial Narrow", Arial, sans-serif;
+    font-size: 4.4em;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+h4 {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    /* color: white; */
+    color: #432c39;
+}
+
+h6 {
+    color: #43e97b;
+    font-family: "mononoki", "Fira Code", monospace, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+p {
+    color: rgb(7, 68, 68);
+    font-family: "mononoki", "Fira Code", monospace, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+
+li {
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+/* * ENCABEZADO */
+
+/* ? Color de Fondo del Encabezado */
+body {
+    background-image: linear-gradient(to right, #43e97b 0%, #4744eef1 100%);
+    height: 100vh;
+}
+
+/* * NAVBAR */
+.navbar-brand {
+    color: #43e97b;
+    padding: 0;
+    margin-left: -9%;
+    padding-right: 100px;
+    font-size: 32px;
+    font-family: 'mononoki', monospace, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* ? Estilo del Titulo */
+.text-encabezado {
+    color: rgb(227, 252, 0);
+    font-weight: 100;
+    text-align: center;
+}
+
+.btn-cabecera {
+    font-family: "mononoki",
+        "Fira Code",
+        monospace,
+        Verdana,
+        Geneva,
+        Tahoma,
+        sans-serif;
+    margin-left: 86%;
+    margin-top: 1%;
+    margin-bottom: -10px;
+    font-size: 95%;
+}
+
+/* ? Estilo del Logo */
+.logo-inicial {
+    text-align: center;
+    margin-top: -70px;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.logo-inicial img {
+    width: 555px;
+    height: 555px;
+}
+
+/* ? Subtexto Descripctivo */
+.subtext-encabezado {
+    text-align: center;
+    color: rgb(236, 191, 42);
+    margin-top: -59px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ? Texto y Contacto Para Wsp */
+.contacto-encabezado {
+    text-align: center;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ? Contacto Wsp 2 Fixed  */
+.logoWsp img {
+    position: fixed;
+    border-radius: 32px;
+    width: 64px;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* * Lineas Decorativas de la Página */
+
+/* ? Linea del encabezado */
+.lineInicio {
+    width: 100%;
+    max-width: 1600px;
+    margin: 1px auto 60px auto;
+    height: 2.5px;
+    background: white;
+    margin-bottom: 50px;
+}
+
+/* ? Linea Para Separar Los Producots 3x3 Del Catálogo */
+.separador-linea {
+    width: 100%;
+    max-width: 1200px;
+    margin: -0 auto;
+    height: 2.5px;
+    background: #ffffff;
+    margin-bottom: 50px;
+}
+
+/* ? Linea Final Para dar Paso Al Footer */
+.lineFin {
+    width: 100%;
+    max-width: 1800px;
+    margin: -20 auto;
+    height: 2.5px;
+    background: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* ? Linea Que Aparece después del Logo del Footer Para Dar Paso A Los Créditos del Creador */
+.lineCreditos {
+    width: 25%;
+    max-width: 1200px;
+    margin: 0px 69vh auto auto;
+    height: 2.5px;
+    background: #432c39;
+    margin-bottom: 20px;
+}
+
+/* * Estilos de la parte del catálOgo (mitad de la página)*/
+
+/* ? Color de Fondo Que De La Sección del Catálogo*/
+.section-catalogo {
+    background-image: linear-gradient(to right, #8ceead 0%, #9999bede 100%);
+    padding-bottom: 10px;
+}
+
+/* ? Borde de los productos */
+.produc-catalogo {
+    border-color: rgba(0, 0, 0, 0.3);
+    border-style: solid;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    padding: 0px 10px 0px 10px;
+
+    /* ? Efecto Blur */
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.9rem);
+    /*For Safari, firefox does not support this type of effect yet */
+    -webkit-backdrop-filter: blur(0.9rem);
+}
+
+/* ? Titulo del Producto */
+.titleProduc {
+    color: rgb(227, 252, 0);
+    text-align: center;
+    padding-top: 30px;
+    font-family: "mononoki", "Fira Code", monospace, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+/* ? Imagen del producto */
+.producto-imagen {
+    width: 300px;
+    height: 200;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ? Especificaciones Subtitulo */
+.text-especifi {
+    text-decoration: dashed;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ? Especificaiones Text */
+.especifi {
+    text-align: justify;
+}
+
+/* ? Lista de Especificaciones */
+.lista-especifi {
+    margin: 30px auto 30px 20px;
+}
+
+/* ? Precio Antes del Descuento */
+.dsct {
+    color: #432c3957;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ? % de descuento */
+.dsct span {
+    color: #432c39;
+}
+
+/* ? Tachar el precio antes del descuento */
+.dsct em {
+    text-decoration: line-through;
+}
+
+/* ? Precio Original */
+.precio {
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.extraer-name {
+    color: transparent;
+    margin-top: -50px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ? Botón de Ver Más */
+.vermas {
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ? Fondo del Botón */
+.vermas button {
+    background-color: #432c39;
+}
+
+/* ? Texto del botón */
+.vermas a {
+    margin: 50px;
+    color: #43e97b;
+    font-family: "mononoki", "Fira Code", monospace, "Franklin Gothic Medium",
+        "Arial Narrow", Arial, sans-serif;
+    font-size: 23px;
+}
+
+/* ? Carrito */
+.logo-addCarrito {
+    color: #432c39;
+    height: 230px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.text-carrito {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 30px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.name-product {
+    color: #43e97b;
+}
+
+/* * Footer - Pié de Página */
+
+/* ? Texto por defecto */
+.entra-form {
+    font-family: "mononoki", "Fira Code", monospace, "Franklin Gothic Medium",
+        "Arial Narrow", Arial, sans-serif, "Times New Roman", Times, serif;
+    display: flex;
+}
+
+.entra-form #formu {
+    margin-left: 11em;
+    margin-top: 25px;
+    font-size: 19px;
+    color: #56e987;
+}
+
+/* ? Derechos Reservados */
+.derechos {
+    margin-left: 60px;
+    margin-top: 25px;
+    margin-right: 25px;
+    color: white;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ? Créditos del Creador */
+.datos {
+    margin: 10px auto 3px auto;
+    text-align: center;
+    color: #432c3973;
+    font-family: mononoki, "Fira Code", monospace, Verdana, Geneva, Tahoma,
+        sans-serif;
+    font-size: 20px;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ? Logo de la empresa */
+.imagen {
+    height: 230px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* * Esto son los estilos de la ventana emergente que aparece cuando carga la pantalla */
+.ofertas-img {
+    width: 498px;
+}
+
+/* ? Texto Dónde Indica El Tiempo de la Oferta */
+.modal-body {
+    font-family: mononoki, "Fira Code", monospace, Verdana, Geneva, Tahoma, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ? Texto Principal de la Ventana */
+#exampleModalLabel {
+    color: #43e97b;
+    font-family: mononoki, "Fira Code", monospace, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* * Botón Que Mostrará Las Cosas Que Hay en el Carrito */
+
+/* ? Redimensionando Aspectos del Botón*/
+#btn-carrito {
+    margin: 30px auto auto auto;
+    padding: 10px 10px 10px 25px;
+    position: fixed;
+    left: -5px;
+    border-color: transparent;
+}
+
+/* ? Texto de los botones */
+.texto-boton {
+    font-family: "mononoki", "Fira Code", monospace, 'Courier New', Courier, sans-serif;
+}
+
+/* ? Fondo del carrito */
+.offcanvas-start {
+
+    /* ? Efecto Blur */
+    background-color: rgba(116, 116, 116, 0.288);
+    backdrop-filter: blur(0.9rem);
+    /*For Safari, firefox does not support this type of effect yet */
+    -webkit-backdrop-filter: blur(0.9rem);
+
+    /* ? No hacer seleccionable el texto */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+/* ? Color del título del color del carrito title  */
+.offcanvas-title {
+    color: yellow;
+}
+
+/* ? Alinear Texto Inicial */
+#listaCarrito {
+    text-align: center;
+}
+
+/* ? Color Texto Inicial */
+#listaCarrito p {
+    color: white;
+
+}
+
+/* ? Alinear Texto Cuando Se Añade Los Productos */
+.produc-carr {
+    text-align: start;
+}
+
+.eliminarProduc {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.726);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ? Color de la cantidad  */
+.cantCarr {
+    color: yellow;
+    text-align: center;
+    font-family: 'mononoki', 'monospace', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
+/* ? Botones del carrito */
+.d-grid {
+    padding-bottom: 20px;
+}
+
+/* * Modal Que Saldrá para Verificar que el producto se haya añadido */
+.modal-title {
+    font-family: "mononoki", "Fira Code", monospace, 'Courier New', Courier, sans-serif;
+    color: #43e97b;
+}
+
+.modal-body {
+    text-align: justify;
+}
+
+.modal-body span {
+    color: #2a8b4a;
+}

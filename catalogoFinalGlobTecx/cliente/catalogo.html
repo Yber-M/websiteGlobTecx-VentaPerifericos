@@ -1,0 +1,1008 @@
+<!-- ! LINK DEL PROYECTO SÚBIDO EN GITHUB : -->
+<!-- ! https://github.com/Yb-Mc/catalogoFinalGlobTecx.git -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- * CABECERA -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ? CONÉCTAMOS CON GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
+
+    <!-- ? Conectamos Con La Página de Iconos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="icon" href="../img/logoFondo.png" />
+
+    <!-- ? Se puso el título que tendrá la página web -->
+    <title>Catálogo GlobTecx-</title>
+
+    <!-- ? Estilo Del Bootstrap -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+
+    <!-- ? Estilos por defecto -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<!-- * CUERPO -->
+
+<body onload="welcomeFuncion()">
+
+    <!-- * Cabeza -->
+    <header>
+
+        <!-- * NAVBAR -->
+
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+
+                <img src="../img/logoFondoRedondo.png" width="38px" height="38px" alt="">
+
+                <a class="navbar-brand">GlobTecx-</a>
+
+                <!-- ? Buscar -->
+                <div class="d-flex" role="search">
+                    <input id="buscar" class="form-control me-2" type="text" placeholder="Buscar productos"
+                        aria-label="Search">
+                    <button id="btnBuscar" class="btn btn-outline-success" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- ? Botón de Inciar Sesión -->
+                <div>
+
+                    <a href="../index.html">
+                        <button type="button" class="btn btn-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-vcard-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm9 1.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0-.5.5ZM9 8a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 0-1h-4A.5.5 0 0 0 9 8Zm1 2.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5Zm-1 2C9 10.567 7.21 9 5 9c-2.086 0-3.8 1.398-3.984 3.181A1 1 0 0 0 2 13h6.96c.026-.163.04-.33.04-.5ZM7 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z" />
+                            </svg>
+                            Volver a Iniciar Sesión
+                        </button>
+                    </a>
+
+                    <!-- ? Botón de Mi cuenta -->
+                    <a href="./gestion-perfil.html" class="btn-micount">
+                        <button type="button" class="btn btn-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                            </svg>
+                            Hola, Aureliano
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- * Carrito de Compras -->
+
+        <!-- Botón del Carrito de Compras -->
+        <button class="btn btn-success" id="btn-carrito" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#carritoCompra" aria-controls="carritoCompra">
+
+            <!-- Imagen de Carrito -->
+            <img id="car-svg" src="../img/carritoVacio.svg" alt="carrito" width="32" height="32">
+
+        </button>
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="carritoCompra"
+            aria-labelledby="carritoCompraLabel">
+
+            <!-- Titulo Del Carrito-->
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="carritoCompraLabel">Carrito de Compras</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="lineFin"></div>
+
+            <!-- Cuerpo Del Carrito -->
+            <div id="listaCarrito" class="offcanvas-body">
+                <p>NO TIENES PRODUCTOS EN TU CARRITO</p>
+                <p>Mejores Precios Siempre Aquí</p>
+            </div>
+
+            <!-- Botones del Carrito -->
+            <div class="d-grid gap-2 col-6 mx-auto">
+                <a href="./finalizarCompra.html" id="botones-carritoActiva" class="btn btn-warning" tabindex="-1"
+                    role="button" aria-disabled="true">
+                    <span class="texto-boton">
+                        PROCESAR COMPRA
+                    </span>
+                </a>
+                <a href="#" class="btn btn-light" tabindex="-1" role="button" aria-disabled="true"
+                    onclick="refrescarPagina()">
+                    <span class="texto-boton">
+                        Borrar Todo
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- ? Titulo -->
+        <h1 class="text-encabezado">
+            <strong> <em>Catálogo Año Nuevo GlobTecx-</em> </strong>
+        </h1>
+
+        <!-- ? Logo de la Empresa -->
+        <div class="logo-inicial">
+            <img src="../img/logoWhite.png" alt="Logo GlobTecx-">
+        </div>
+
+        <!-- ? Subtitulo -->
+        <p class="subtext-encabezado">
+            <strong> <em> Catálogo Tecnológico de la Empresa GlobTecx-. </em> </strong>
+        </p>
+
+        <!-- ? Contácto Wsp -->
+        <p class="contacto-encabezado">
+            <em> Contáctanos por nuestro WhatsApp. Haga clic en una continuación
+                <a href="https://api.whatsapp.com/send?phone=51932125600">
+                    <img src="../img/whatsapp.png" alt="WhatsAppLogo">
+                </a>
+            </em>
+        </p>
+
+    </header>
+
+    <!-- * CATALOGO -->
+    <main>
+
+        <!-- ? Sección Catalogo -->
+        <section class="section-catalogo">
+
+            <!-- ? Linea Separadora del Inicio - Catalogo -->
+            <div class="lineInicio"></div>
+
+            <!-- ? Contenedor Bootstrap -->
+            <div class="container">
+
+                <!-- ? Fila Bootstrap -->
+                <div class="row glass-efect">
+                    <!-- ? Laptop Acer Nitro G5 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="produc-catalogo">
+
+                            <!-- ? Titulo y subtitulo  -->
+                            <h3 class="titleProduc">Laptop Acer <br> Nitro G5</h3>
+                            <center>
+                                <img class="producto-imagen" src="./img-productos/acer.png" alt="producto">
+                            </center>
+
+
+                            <h4 class="text-especifi">
+                                <strong>Especificaciones:</strong>
+                            </h4>
+
+                            <!-- ? Especifaciones -->
+                            <strong>
+                                <div class="especifi">
+                                    <p>
+                                        Laptop de último modelo con alta gama de técnología, ideal para stremear, juegos
+                                        de
+                                        alta gama, programar, editar videos, programas de ingeniería y arquitectura.
+                                    </p>
+                                </div>
+
+                                <div class="lista-especifi">
+                                    <li>Core i9 11va Generación</li>
+                                    <li>16gb de RAM DDR4</li>
+                                    <li>512TB SSD</li>
+                                    <li>RTX 3060 6GB</li>
+                                    <li>144hz</li>
+                                    <li>15.6"</li>
+                                </div>
+                                <!-- ? Descuento del Producto -->
+                                <p class="dsct">
+                                    <em>S/ 7,999.00</em>
+                                    <span>-20%</span>
+                                </p>
+
+                                <!-- ? Precio del Producto -->
+                                <p class="precio">
+                                    S/ <em>6,399.00</em>
+                                </p>
+
+                                <!-- ? Texto Para Extraer(alternativa para solucionar error) -->
+                                <p class="extraer-name">Laptop Acer Nitro G5</p>
+
+                                <!-- ? Botón que redireciona a la página oficial-->
+                                <div class="vermas">
+                                    <button>
+                                        <a href="https://www.acer.com/mx-es/laptops/nitro/nitro-5/pdp/NH.QEKAL.004"
+                                            target="_blank" rel="pagina-oficial">VER MÁS</a>
+                                    </button>
+                                </div>
+
+                                <!-- ? Añadir al carrito -->
+                                <p class="text-carrito">
+                                    <a class="logo-addCarrito" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                        onclick="addCar(this)">
+                                        <!-- ? Logo de añadir al carrito -->
+                                        <i class='bx bx-cart-add'></i>
+                                    </a> <br>
+                                    Añadir al Carrito
+                                </p>
+                            </strong>
+                        </div>
+                    </div>
+
+                    <!-- Siguiente Producto -->
+
+                    <!-- ? Tarjeta Gráfica RTX 3090 Ti -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="produc-catalogo">
+
+
+                            <!-- ? Titulo y subtitulo  -->
+                            <h3 class="titleProduc">Tarjeta Gráfica <br> RTX 3090 Ti</h3>
+                            <center>
+                                <img class="producto-imagen" src="./img-productos/grafica.png" alt="producto">
+                            </center>
+
+
+                            <h4 class="text-especifi">
+                                <strong>Especificaciones:</strong>
+                            </h4>
+
+                            <!-- ? Especifaciones -->
+                            <strong>
+                                <div class="especifi">
+                                    <p>
+                                        Las GeForce RTX™ 3090 Ti y 3090 son implacables GPUs (BFGPU) con
+                                        rendimiento de clase TITAN. Impulsadas con tecnología Ampere. Cuentan con 24 GB
+                                        de asombrosa memoria G6X
+                                    </p>
+                                </div>
+
+                                <div class="lista-especifi">
+                                    <li>Nvidia GEFORCE</li>
+                                    <li>GDDR6X Memoria gráfica</li>
+                                    <li>24GB Tamaño Memoria</li>
+                                    <li>2 HDMI 2.1,3 DisplayPort 1.4a</li>
+                                    <li>ROG - White</li>
+                                    <li>PCI-Express 4.0</li>
+                                </div>
+
+                                <!-- ? Descuento del Producto -->
+                                <p class="dsct">
+                                    <em>S/ 8,520.00</em>
+                                    <span>-15%</span>
+                                </p>
+
+                                <!-- ? Precio del Producto -->
+                                <p class="precio">
+                                    S/ <em>7,242.00</em>
+                                </p>
+
+                                <!-- ? Texto Para Extraer(alternativa para solucionar error) -->
+                                <p class="extraer-name">Tarjeta Gráfica RTX 3090 Ti</p>
+
+                                <!-- ? Botón que redireciona a la página oficial-->
+                                <div class="vermas">
+                                    <button>
+                                        <a href="https://www.nvidia.com/es-la/geforce/graphics-cards/30-series/rtx-3090-3090ti/"
+                                            target="_blank" rel="pagina-oficial">VER MÁS</a>
+                                    </button>
+                                </div>
+
+                                <!-- ? Añadir al carrito -->
+                                <p class="text-carrito">
+                                    <a class="logo-addCarrito" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                        onclick="addCar(this)">
+
+                                        <!-- ? Logo de la Página -->
+                                        <i class='bx bx-cart-add'></i>
+                                    </a>
+                                    <br>
+                                    Añadir al Carrito
+                                </p>
+                            </strong>
+                        </div>
+                    </div>
+
+                    <!-- Siguiente Producto -->
+
+                    <!-- ? Teclado Mecánico Logitech G Pro -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="produc-catalogo">
+
+
+                            <!-- ? Titulo y subtitulo  -->
+                            <h3 class="titleProduc">Teclado Mecánico <br> Logitech G Pro</h3>
+                            <center>
+                                <img class="producto-imagen" src="./img-productos/teclado.png" alt="producto">
+                            </center>
+
+
+                            <h4 class="text-especifi">
+                                <strong>Especificaciones:</strong>
+                            </h4>
+
+                            <!-- ? Especifaciones -->
+                            <strong>
+                                <div class="especifi">
+                                    <p>
+                                        Probada en torneos luciendo diseños de League of Legends. Diseño compacto junto
+                                        con
+                                        los interruptores táctiles ideales para jugar para League of Legends.
+                                    </p>
+                                </div>
+
+                                <div class="lista-especifi">
+                                    <li>FHD de 31,5 pulgadas (1920 x 1080)</li>
+                                    <li>165 Hz y MBR de 1 ms</li>
+                                    <li>sRGB 95 % (Typ.) y HDR10</li>
+                                    <li>Compatible con NVIDIA® G-SYNC®</li>
+                                    <li>AMD FreeSync™ Premium</li>
+                                    <li>Pantalla prácticamente sin bordes</li>
+                                </div>
+
+                                <!-- ? Descuento del Producto -->
+                                <p class="dsct">
+                                    <em>S/ 1,499.00</em>
+                                    <span>-30%</span>
+                                </p>
+
+                                <!-- ? Precio del Producto -->
+                                <p class="precio">
+                                    S/ <em>1049.00</em>
+                                </p>
+
+                                <!-- ? Texto Para Extraer(alternativa para solucionar error) -->
+                                <p class="extraer-name">Teclado Mecánico Logitech G Pro</p>
+
+                                <!-- ? Botón que redireciona a la página oficial-->
+                                <div class="vermas">
+                                    <button>
+                                        <a href="https://www.logitechg.com/es-roam/products/gaming-keyboards/league-of-legends-pro-mechanical-gaming-keyboard.920-010533.html"
+                                            target="_blank" rel="pagina-oficial">VER MÁS</a>
+                                    </button>
+                                </div>
+
+                                <!-- ? Añadir al carrito -->
+                                <p class="text-carrito">
+                                    <a class="logo-addCarrito" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                        onclick="addCar(this)">
+
+                                        <!-- ? Logo de la Página -->
+                                        <i class='bx bx-cart-add'></i>
+                                    </a>
+                                    <br>
+                                    Añadir al Carrito
+                                </p>
+                            </strong>
+                        </div>
+                    </div>
+
+                    <div class="separador-linea"></div>
+
+                    <!-- Siguiente Producto -->
+
+                    <!-- ? Monitor Gaming UltraGear™ -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="produc-catalogo">
+
+
+                            <!-- ? Titulo y subtitulo  -->
+                            <h3 class="titleProduc">Monitor Gaming <br>UltraGear™</h3>
+                            <center>
+                                <img class="producto-imagen" src="./img-productos/monitor.png" alt="producto">
+                            </center>
+
+
+                            <h4 class="text-especifi">
+                                <strong>Especificaciones:</strong>
+                            </h4>
+
+                            <!-- ? Especifaciones -->
+                            <strong>
+                                <div class="especifi">
+                                    <p>
+                                        La velocidad de 165Hz le permite a los jugadores ver rápidamente el próximo
+                                        cuadro y
+                                        hace que la imagen aparezca con fluidez. Responde rápidamente a los oponentes y
+                                        apuntar con facilidad.
+                                    </p>
+                                </div>
+
+                                <div class="lista-especifi">
+                                    <li>FHD de 31,5 pulgadas (1920 x 1080)</li>
+                                    <li>165 Hz y MBR de 1 ms</li>
+                                    <li>sRGB 95 % (Typ.) y HDR10</li>
+                                    <li>Compatible con NVIDIA® G-SYNC®</li>
+                                    <li>AMD FreeSync™ Premium</li>
+                                    <li>Pantalla prácticamente sin bordes</li>
+                                </div>
+
+                                <!-- ? Descuento del Producto -->
+                                <p class="dsct">
+                                    <em>S/ 7,999.00</em>
+                                    <span>-20%</span>
+                                </p>
+
+                                <!-- ? Precio del Producto -->
+                                <p class="precio">
+                                    S/
+                                    <em>6,399.00</em>
+                                </p>
+
+                                <!-- ? Texto Para Extraer(alternativa para solucionar error) -->
+                                <p class="extraer-name">Monitor Gaming UltraGear™</p>
+
+                                <!-- ? Botón que redireciona a la página oficial-->
+                                <div class="vermas">
+                                    <button>
+                                        <a href="https://www.lg.com/pe/monitores/lg-32gn50r-b" target="_blank"
+                                            rel="pagina-oficial">VER MÁS</a>
+                                    </button>
+                                </div>
+
+                                <!-- ? Añadir al carrito -->
+                                <p class="text-carrito">
+                                    <a class="logo-addCarrito" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                        onclick="addCar(this)">
+
+                                        <!-- ? Logo de la Página -->
+                                        <i class='bx bx-cart-add'></i>
+
+                                    </a>
+                                    <br>
+                                    Añadir al Carrito
+                                </p>
+                            </strong>
+                        </div>
+                    </div>
+
+                    <!-- Siguiente Producto -->
+
+                    <!-- ? Audífono Logitech G735 Aurora -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="produc-catalogo">
+
+
+                            <!-- ? Titulo y subtitulo  -->
+                            <h3 class="titleProduc">Audífono Logitech<br> G735 Aurora</h3>
+
+                            <center>
+                                <img class="producto-imagen" src="./img-productos/cascos.png" alt="producto">
+                            </center>
+
+
+                            <h4 class="text-especifi">
+                                <strong>Especificaciones:</strong>
+                            </h4>
+
+                            <!-- ? Especifaciones -->
+                            <strong>
+                                <div class="especifi">
+                                    <p>
+                                        El confort y el ajuste para todos los jugadores, incluso para
+                                        quienes tienen la cabeza pequeña. Juega a gusto con una diadema suave como las
+                                        nubes
+                                        y con copas giratorias.
+                                    </p>
+                                </div>
+
+                                <div class="lista-especifi">
+                                    <li>Luce tu estilo (RGB)</li>
+                                    <li>Confort prolongado</li>
+                                    <li>Audífonos inalámbricos con micrófono </li>
+                                    <li>Máxima velocidad con Lightspeed</li>
+                                    <li>Adapta tu equipo con G HUB</li>
+                                    <li>Transductores de audio de 40 mm</li>
+                                </div>
+
+                                <!-- ? Descuento del Producto -->
+                                <p class="dsct">
+                                    <em>S/ 699.00</em>
+                                    <span>-20%</span>
+                                </p>
+
+                                <!-- ? Precio del Producto -->
+                                <p class="precio">
+                                    S/
+                                    <em>559.00</em>
+                                </p>
+
+                                <!-- ? Texto Para Extraer(alternativa para solucionar error) -->
+                                <p class="extraer-name">Audífono Logitech G735 Aurora</p>
+
+                                <!-- ? Botón que redireciona a la página oficial-->
+                                <div class="vermas">
+                                    <button>
+                                        <a href="https://www.logitechg.com/es-roam/products/gaming-audio/g735-wireless-bluetooth-headset.981-001082.html"
+                                            target="_blank" rel="pagina-oficial">VER MÁS</a>
+                                    </button>
+                                </div>
+
+                                <!-- ? Añadir al carrito -->
+                                <p class="text-carrito">
+                                    <a class="logo-addCarrito" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                        onclick="addCar(this)">
+
+                                        <!-- ? Logo de la Página -->
+                                        <i class='bx bx-cart-add'></i>
+                                    </a>
+                                    <br>
+                                    Añadir al Carrito
+                                </p>
+                            </strong>
+                        </div>
+                    </div>
+
+                    <!-- Siguiente Producto -->
+
+                    <!-- ? LG Gaming Speaker GP9 Ultragear -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="produc-catalogo">
+
+
+                            <!-- ? Titulo y subtitulo  -->
+                            <h3 class="titleProduc">LG Gaming Speaker<br> GP9 Ultragear</h3>
+
+                            <center>
+                                <img class="producto-imagen" src="./img-productos/sonidoLG.png" alt="producto">
+                            </center>
+
+
+                            <h4 class="text-especifi">
+                                <strong>Especificaciones:</strong>
+                            </h4>
+
+                            <!-- ? Especifaciones -->
+                            <strong>
+                                <div class="especifi">
+                                    <p>
+                                        El altovoz para juegos LG UltraGer esta diseñado para una experiencia precisa y
+                                        realista, dando bienvenida a la nueva experiencia de tu juego 3D Gaming Sound.
+                                        Sonido envolvente virtual de 7.1
+                                    </p>
+                                </div>
+
+                                <div class="lista-especifi">
+                                    <li>El sonido preciso para gamers</li>
+                                    <li>Chat de voz incluido</li>
+                                    <li>Sonido 3D para Gaming</li>
+                                    <li>Auriculares DTS</li>
+                                    <li>Ecualización Personalizada</li>
+                                    <li>Batería Integrada</li>
+                                </div>
+
+                                <!-- ? Descuento del Producto -->
+                                <p class="dsct">
+                                    <em>S/ 3,504.00</em>
+                                    <span>-50%</span>
+                                </p>
+
+                                <!-- ? Precio del Producto -->
+                                <p class="precio">
+                                    S/
+                                    <em>1,752.00</em>
+                                </p>
+
+                                <!-- ? Texto Para Extraer(alternativa para solucionar error) -->
+                                <p class="extraer-name">LG Gaming Speaker GP9 Ultragear</p>
+
+                                <!-- ? Botón que redireciona a la página oficial-->
+                                <div class="vermas">
+                                    <button>
+                                        <a href="https://www.lg.com/pe/equipos-de-sonido/lg-gp9" target="_blank"
+                                            rel="pagina-oficial">VER MÁS</a>
+                                    </button>
+                                </div>
+
+                                <!-- ? Añadir al carrito -->
+                                <p class="text-carrito">
+                                    <a class="logo-addCarrito" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                        onclick="addCar(this)">
+
+                                        <!-- ? Logo de la Página -->
+                                        <i class='bx bx-cart-add'></i>
+                                    </a>
+                                    <br>
+                                    Añadir al Carrito
+                                </p>
+                            </strong>
+                        </div>
+                    </div>
+
+                    <div class="separador-linea"></div>
+
+                    <!-- Siguiente Producto -->
+                    <!-- ? RTX 3070 TI 8GB GDDR6X -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="produc-catalogo">
+
+
+                            <!-- ? Titulo y subtitulo  -->
+                            <h3 class="titleProduc">Tarjeta Gráfica <br>RTX 3070 Ti</h3>
+
+                            <center>
+                                <img class="producto-imagen" src="./img-productos/rtx3070ti.png" alt="producto">
+                            </center>
+
+
+                            <h4 class="text-especifi">
+                                <strong>Especificaciones:</strong>
+                            </h4>
+
+                            <!-- ? Especifaciones -->
+                            <strong>
+                                <div class="especifi">
+                                    <p>
+                                        La arquitectura RTX de segunda generación de NVIDIA Nuevos multiprocesadores de
+                                        transmisión y memoria de alta velocidad, ideal para la potencia que necesitas.
+                                    </p>
+                                </div>
+
+                                <div class="lista-especifi">
+                                    <li>EVGA NVIDIA GeForce</li>
+                                    <li>Reloj Boost: 1860 MHz</li>
+                                    <li>Memoria 8GB GDDR6X</li>
+                                    <li>Logotipo del LED: ARGB</li>
+                                    <li>DirectX® 12 Ultimate</li>
+                                    <li>Listo para VR</li>
+                                </div>
+
+                                <!-- ? Descuento del Producto -->
+                                <p class="dsct">
+                                    <em>S/ 6,889.00</em>
+                                    <span>-30%</span>
+                                </p>
+
+                                <!-- ? Precio del Producto -->
+                                <p class="precio">
+                                    S/
+                                    <em>4,824.00</em>
+                                </p>
+
+                                <!-- ? Texto Para Extraer(alternativa para solucionar error) -->
+                                <p class="extraer-name">Tarjeta Gráfica RTX 3070 Ti</p>
+
+                                <!-- ? Botón que redireciona a la página oficial-->
+                                <div class="vermas">
+                                    <button>
+                                        <a href="https://www.nvidia.com/es-la/geforce/graphics-cards/30-series/rtx-3070-3070ti/"
+                                            target="_blank" rel="pagina-oficial">VER MÁS</a>
+                                    </button>
+                                </div>
+
+                                <!-- ? Añadir al carrito -->
+                                <p class="text-carrito">
+                                    <a class="logo-addCarrito" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                        onclick="addCar(this)">
+
+                                        <!-- ? Logo de la Página -->
+                                        <i class='bx bx-cart-add'></i>
+                                    </a>
+                                    <br>
+                                    Añadir al Carrito
+                                </p>
+                            </strong>
+                        </div>
+                    </div>
+
+                    <!-- Siguiente Producto -->
+
+                    <!-- ? Laptop ROG Strix G17 -->
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="produc-catalogo">
+
+                            <!-- ? Titulo y subtitulo  -->
+                            <h3 class="titleProduc">Laptop ROG<br> Strix G17</h3>
+
+                            <center>
+                                <img class="producto-imagen" src="./img-productos/laptopROG.png" alt="producto">
+                            </center>
+
+
+                            <h4 class="text-especifi">
+                                <strong>Especificaciones:</strong>
+                            </h4>
+
+                            <!-- ? Especifaciones -->
+                            <strong>
+                                <div class="especifi">
+                                    <p>
+                                        Eleva tu experiencia gaming con la potencia del ROG Strix. Con la potente CPU
+                                        hasta
+                                        AMD Ryzen™ 9 5900HX y GeForce RTX™ 3070 todo va más rápido, desde los juegos a
+                                        la
+                                        multitarea avanzada.
+                                    </p>
+                                </div>
+
+                                <div class="lista-especifi">
+                                    <li>AMD Ryzen 9 6900HX</li>
+                                    <li>Memoria RAM 16GB</li>
+                                    <li>GeForce RTX 3070 Ti</li>
+                                    <li>2560 x 1440 | 240hz</li>
+                                    <li>Wi-Fi 6E(802.11ax)</li>
+                                    <li>Windows 11 Home</li>
+                                </div>
+
+                                <!-- ? Descuento del Producto -->
+                                <p class="dsct">
+                                    <em>S/ 13,299.00</em>
+                                    <span>-20%</span>
+                                </p>
+
+                                <!-- ? Precio del Producto -->
+                                <p class="precio">
+                                    S/
+                                    <em>11,120</em>
+                                </p>
+
+                                <!-- ? Texto Para Extraer(alternativa para solucionar
+                                     ? error que no deja sacar el nombre del producto) -->
+                                <p class="extraer-name">Laptop ROG Strix G17</p>
+
+                                <!-- ? Botón que redireciona a la página oficial-->
+                                <div class="vermas">
+                                    <button>
+                                        <a href="https://rog.asus.com/pe/laptops/rog-strix/2021-rog-strix-g17-series/"
+                                            target="_blank" rel="pagina-oficial">VER MÁS</a>
+                                    </button>
+                                </div>
+
+                                <!-- ? Añadir al carrito -->
+                                <p class="text-carrito">
+
+                                    <a class="logo-addCarrito" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                        onclick="addCar(this)">
+
+                                        <!-- ? Logo de la Página -->
+                                        <i class='bx bx-cart-add'></i>
+                                    </a>
+                                    <br>
+                                    Añadir al Carrito
+                                </p>
+                            </strong>
+                        </div>
+                    </div>
+
+                    <!-- Siguiente Producto -->
+
+                    <!-- ? REDRAGON YAMA WHITE RGB K550W-SP -->
+                    <div class=" col-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="produc-catalogo">
+
+
+                            <!-- ? Titulo y subtitulo  -->
+                            <h3 class="titleProduc">REDRAGON Yama<br> White RGB</h3>
+
+                            <center>
+                                <img class="producto-imagen" src="./img-productos/yamaRedragon.png" alt="producto">
+                            </center>
+
+
+                            <h4 class="text-especifi">
+                                <strong>Especificaciones:</strong>
+                            </h4>
+
+                            <!-- ? Especifaciones -->
+                            <strong>
+                                <div class="especifi">
+                                    <p>
+                                        Los Yama Black y White lo tienen todo. ¿Macros? ¡Muchas! ¿Teclas
+                                        multimedia y
+                                        RGB
+                                        dedicadas? Todas. ¿Rueda de volumen? Por supuesto.
+                                        ¿Reposamuñecas? Claro que sí,
+                                        desmontable y magnético.
+                                    </p>
+                                </div>
+
+                                <div class="lista-especifi">
+                                    <li>Outemu purple</li>
+                                    <li>Teclado 100%</li>
+                                    <li>RGB Chroma</li>
+                                    <li>Cable Reforzado</li>
+                                    <li>100% anti-ghosting</li>
+                                    <li>Software Para Editar RGB</li>
+                                </div>
+
+                                <!-- ? Descuento del Producto -->
+                                <p class="dsct">
+                                    <em>S/ 450.00</em>
+                                    <span>-15%</span>
+                                </p>
+
+                                <!-- ? Precio del Producto -->
+                                <p class="precio">
+                                    S/
+                                    <em>382.50</em>
+                                </p>
+
+                                <!-- ? Texto Para Extraer(alternativa para solucionar error) -->
+                                <p class="extraer-name">REDRAGON Yama White RGB</p>
+
+                                <!-- ? Botón que redireciona a la página oficial-->
+                                <div class="vermas">
+                                    <button>
+                                        <a href="https://redragon.es/products/yama-k550/" target="_blank"
+                                            rel="pagina-oficial">VER MÁS</a>
+                                    </button>
+                                </div>
+
+                                <!-- ? Añadir al carrito -->
+
+
+                                <!-- ? Modal de aceptación de agregar al carrito -->
+                                <p class="text-carrito">
+                                    <a class="logo-addCarrito" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                        onclick="addCar(this)">
+
+                                        <!-- ? Logo de la Página -->
+                                        <i class='bx bx-cart-add'></i>
+                                        <br>
+                                    </a>
+                                    Añadir al Carrito
+                                </p>
+                            </strong>
+                        </div>
+                    </div>
+
+                    <!-- Siguiente Producto -->
+
+                    <!-- * Contácto Wsp Fixed -->
+                    <div class="logoWsp">
+                        <a target="_blank" href="https://api.whatsapp.com/send?phone=51932125600">
+                            <img src="../img/whatsapp2.png" alt="WhatsAppLogoFixed">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <div class="lineFin"></div>
+
+    <!-- * PIÉ DE PÁGINA -->
+    <footer class="pie-pagina">
+
+        <div class="container">
+            <div class="entra-form">
+                <p class="derechos">
+                    <strong>
+                        Empresa © GlobTecx-.
+                        Contenido de la Página con los Derechos Reservados
+                    </strong>
+                    <br> <i> 2023, Lima - Perú </i> <br>
+                </p>
+                <a id="formu" href="./formulario.html">
+                    <button type="button" class="btn btn-outline-light"> Formulario Para Otros Sevicios </button>
+                </a>
+
+            </div>
+            <center>
+                <img class="imagen" src="../img/logoBlack.png" alt="">
+            </center>
+            <div class="lineCreditos"></div>
+
+            <!-- ? Créditos del creador -->
+            <div class="datos">
+                <h5>
+                    Página Realizada Por: {Yb.M};<br>
+                    Correo: ybermarlon@gmail.com
+                </h5>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ? Modal Que Se Muestra Al Inciar La Página-->
+    <div class="modal fade" id="modalEntrada" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">¡Grandes Ofertas!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <center>
+                    <img src="../img/ofertas.png" alt="ofertas" class="ofertas-img">
+                </center>
+                <div class="modal-body" style="text-align: center;">Oferta Válida Desde El <span style="color: red;">
+                        01/01/23 — 30/02/23 </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ? Alerta de que se añadió el producto al carrito -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Tu producto se agregó al carrito</h1>
+                </div>
+                <div class="modal-body">
+                    <span>Se añadió el producto con éxito✅</span>, para terminar con la compra de click en el carrito🛒
+                    de compras y en el botón finalizar compra.🛍️
+                </div>
+                <div class="modal-footer" id="btn-continuar" onclick="activarBtn()">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal"
+                        onclick="actualizarLista()">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Funcionalidad del Buscador
+        btnBuscar.onclick = function () {
+            var buscar = document.getElementById("buscar").value;
+
+            switch (buscar) {
+                case "":
+                    alert("Texto erroneo, el campo no puede estar vacio");
+                    break;
+                case "Laptop Acer Nitro G5":
+                    alert("PRODUCTO ENCONTRADO en el número: 1 - 1er Fila");
+                    buscar.value == "";
+                    break;
+                case "Tarjeta Gráfica RTX 3090 Ti":
+                    alert("PRODUCTO ENCONTRADO en el número: 2 - 1er Fila");
+                    break;
+                case "Teclado Mecánico Logitech G Pro":
+                    alert("PRODUCTO ENCONTRADO en el número: 3 - 1er Fila");
+                    break;
+                case "Monitor Gaming UltraGear™":
+                    alert("PRODUCTO ENCONTRADO en el número: 4 - 2da Fila");
+                    break;
+                case "Audífono Logitech G735 Aurora":
+                    alert("PRODUCTO ENCONTRADO en el número: 5 - 2da Fila");
+                    break;
+                case "LG Gaming Speaker GP9 Ultragear":
+                    alert("PRODUCTO ENCONTRADO en el número: 6 - 2da Fila");
+                    break;
+                case "Tarjeta Gráfica RTX 3070 Ti":
+                    alert("PRODUCTO ENCONTRADO en el número: 7 - 3era Fila");
+                    break;
+                case "Laptop ROG Strix G17":
+                    alert("PRODUCTO ENCONTRADO en el número: 8 - 3era Fila");
+                    break;
+                case "REDRAGON Yama White RGB":
+                    alert("PRODUCTO ENCONTRADO en el número: 9 - 3era Fila");
+                    break;
+                default:
+                    alert("No Se Encontraron Productos");
+            }
+        }
+
+    </script>
+    <!-- * Indicamos la dirección del JS de bootstrap -->
+    <script src="../bootstrap/js/bootstrap.js"></script>
+
+    <!-- * Script Funcionalidades -->
+    <script src="./script.js"></script>
+
+    <!-- * ICONOS 'Ionicons 5.5.2' -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logoFondo.png">
+
+    <title>Finalizar Compra</title>
+
+    <!-- ? Estilo Del Bootstrap -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+
+    <!-- ? Estilo Principal -->
+    <link rel="stylesheet" href="./styleFinComp.css">
+
+    <!-- ? Conectamos con Paypal -->
+    <script
+        src="https://www.paypal.com/sdk/js?client-id=AezIBdwucYJ78LffdNgjTUzBGLhKq4BoRHaaPpFCKQcpgK31xvDNcBi4n_F153V2vw5R1KpweMNQnrgd"></script>
+</head>
+
+
+<body>
+
+    <nav class="navbar" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./catalogo.html">
+                <img src="../img/logoWhite.png" width="58px" height="58px" class="d-inline-block align-text-top">
+                <span>Inicio</span>
+            </a>
+        </div>
+    </nav>
+
+    <h1 class="title-carr">Carrito de Compras</h1>
+    <hr>
+
+    <!-- * PARTE DE LA LISTA DEL CARRITO -->
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-9 col-lg-9">
+            <section id="carrito">
+                <!-- ? PRODUCTO -->
+                <div class="card mb-3" style="max-width: 900px;" id="productos">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="./img-productos/sonidoLG.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">LG Gaming Speaker GP9 Ultragear</h5>
+                                <p class="card-text">El altovoz para juegos LG UltraGer esta diseñado para una
+                                    experiencia
+                                    precisa y
+                                    realista, dando bienvenida a la nueva
+                                    experiencia de tu juego 3D Gaming Sound. Sonido envolvente virtual de 7.1</p>
+                                <p class="card-text">
+                                    <small class="text-muted">
+                                        <!-- ? Descuento del Producto -->
+                                        <strong>
+                                            <p class="dsct">
+                                                <em>S/ 3,504.00</em>
+                                                <span>-50%</span>
+                                            </p>
+                                        </strong>
+
+                                        <!-- ? Precio del Producto -->
+                                        <strong>
+                                            <p class="precio">
+                                                S/
+                                                <em>1,752.00</em>
+                                            </p>
+                                        </strong>
+                                    </small>
+                                </p>
+                                <a href="javascript:eliminarProducto();">
+                                    <div class="btnEliminarPr">
+                                        <button type="button" class="btn btn-danger">
+                                            Eliminar Producto
+                                        </button>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <div class="alert alert-success" role="alert" style="max-width:900px;">
+                ⚠️Está apunto de finalizar su compra, asegúrese de haber seleccionador correctamente sus productos y
+                oprima en PAGAR.
+            </div>
+
+        </div>
+
+        <div class="col col-12 col-sm-12 col-md-3 col-lg-3 border p-3" id="cuerpoTotal">
+            <div class="row">
+                <h3>Resumen del Pedido</h3>
+                <hr>
+                <p>Subtotal: S/1,752.00</p>
+                <hr>
+                <p>Envio: S/15.00</p>
+                <hr>
+                <p>GlobTecx- Puntos: 890</p>
+                <hr>
+                <p>Total: S/1,767</p>
+
+                <div id="paypal-button-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function eliminarProducto() {
+            $("#productos").remove();
+            $(".btn.btn-success").remove();
+            $("#carrito").html('<div class="col col-12 border-bottom p-5 text-center"><p style="color: white;"><strong>No hay ningún producto en el carrito' +
+                '. Busque en nuestro catálogo y presione en AÑADIR AL CARRITO</strong></p>' +
+                '<div class="col col-12 p-5">' +
+                '<a href="./catalogo.html">\n<button type="button" class="btn btn-success">\nVolver al Catálogo\n</button></a>');
+
+            $("#cuerpoTotal").html('<div class="col col-12 border-bottom">' +
+                '<h3>Resumen del Pedido</h3> </div>');
+
+        }
+
+        // Paypal API
+        paypal.Buttons({
+            style: {
+                shape: 'pill',
+                label: 'pay'
+            },
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: 462
+                        }
+                    }]
+                });
+            },
+
+            onApprove: function (data, actions) {
+                actions.order.capture().then(function (detalles) {
+                    console.log(detalles);
+                });
+            },
+
+            onCancel: function (data) {
+                alert("El Pago Fue Cancelado.")
+                console.log(data);
+            }
+        }).render('#paypal-button-container')
+    </script>
+</body>
+
+</html>

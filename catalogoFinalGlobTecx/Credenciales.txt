@@ -1,0 +1,7 @@
+Las credenciales para ADMINISTRADOR SON:
+correo: ybermarlon@gmail.com
+contra: 123
+
+Las credenciales para CLIENTE SON:
+user@gmail.com
+12

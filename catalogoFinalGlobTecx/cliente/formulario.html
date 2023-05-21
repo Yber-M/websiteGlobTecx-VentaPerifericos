@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- * CABEZA -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet" />
+  <link rel="icon" href="../img/logoFondo.png" />
+  <link rel="stylesheet" href="styleForm.css" />
+  <title>Soporte GLOBTECx-</title>
+</head>
+
+<!-- * Acción que redireccionara a otra página -->
+<form action="agradecimiento.html" method="post">
+
+  <!-- * CUERPO -->
+
+  <body class="todo">
+
+    <!-- ? Formulario Completo -->
+    <div class="form-completo">
+
+      <!-- ? Titulo y subtitulo -->
+      <h1><u> Formulario para Consultas GLOBTECx- </u></h1>
+      <h2>Contácto :</h2>
+
+      <!-- ? PARTE DE DATOS -->
+      <section id="date" class="date">
+        <h3>Nombres:</h3>
+        <input class="datos" type="text" name="Nombres" id="nombres" placeholder="Ingrese sus Nombres" />
+        <label for="apel">Apellidos:</label>
+        <input class="datos" type="text" name="Apellido" id="apellido" placeholder="Ingrese sus Apellidos" />
+        <h3>Correo Electrónico:</h3>
+        <input class="datos" type="email" name="Correo" id="correo" placeholder="@gmail.com" />
+        <label for="num">Celular:</label>
+        <input class="datos" type="text" name="celular" id="correo" placeholder="+51 ### ### ###" maxlength="15" />
+        <span>Como máximo 14 caracteres</span>
+      </section>
+
+      <!-- ? PÁRTDE DE CONSULTA -->
+      <h2>Consulta:</h2>
+      <h3>Tipo de Servicio:<span>(Solo seleccione una opción)</span></h3>
+      <section id="consult" class="consult">
+        <input type="checkbox" name="tecnica" id="tecnico" />
+        <label for="typeConsult"> Asistencia Técnica</label>
+
+        <input type="checkbox" name="informatica" id="informatico" />
+        <label for="typeConsult1"> Problema con Nuestros Productos</label>
+
+        <input type="checkbox" name="garantia" id="garantia" />
+        <label for="typeConsult2">Garantía</label>
+        <p></p>
+        <input type="checkbox" name="cotización" id="cotización" />
+        <label for="typeConsult3">Cotización de Componentes</label>
+
+        <input type="checkbox" name="armar" id="armar" />
+        <label for="typeConsult4">Esamblar Computadora</label>
+
+        <input type="checkbox" name="humano" id="humano" />
+        <label for="typeConsult15">Asesor Humano</label>
+      </section>
+
+      <!-- ? DETALLE SEGÚN LO SELECCIONADO -->
+      <h2>Detalles Extras:</h2>
+      <h4>
+        Comentenos más sobre el problema o el servicio que desea obtener de
+        forma breve, usando palabras cláves. <em>GRACIAS POR ELEGIRNOS. </em>
+      </h4>
+      <section class="detall">
+        <input class="detalles" type="text" name="detall" id="detall" maxlength="125" />
+        <span>Máx.125</span>
+        <p></p>
+        <h4>Si es posible, adjunte una imágen para su rápida antención:</h4>
+        <input class="archi" type="file" name="archi" id="archi" />
+      </section>
+
+      <!-- ? PARTE FINAL -->
+      <section id="fin" class="fin">
+        <p>
+          Lea los Términos y Condiciones
+          <a class="condi" href="condiciones.html" target="_blank" style="cursor: help">
+            AQUÍ</a>
+        </p>
+        <!-- ? LOGO -->
+        <div style="text-align: center">
+          <input style="cursor: pointer" type="submit" value="Enviar Consulta" class="button" />
+        </div>
+        <div id="logo" class="logo">
+          <img src="../img/logoSinFondo.png" alt="logo" width="200" height="210" />
+        </div>
+        <p style="text-align: center; font-family: mononoki">
+          Realizado por : {Yb.M};
+        </p>
+      </section>
+    </div>
+  </body>
+</form>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="../img/logoFondo.png">
+   <title>Gestión de Datos</title>
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="./styleProfile.css">
+
+</head>
+
+<body>
+
+   <div class="update-profile">
+
+      <form action="" method="post" enctype="multipart/form-data">
+         <img src="./img-productos/default-avatar.png">
+         <!-- <img src="uploaded_img/'.$fetch['image'].'">'; -->
+
+         <div class="message">Mis Datos Personales</div>
+
+
+         <div class="flex">
+            <div class="inputBox">
+               <span>Nombre Completo (Como aparece en el DNI): </span>
+               <input type="text" name="update_name" value="Aureliano Buendia" class="box">
+
+               <span>Teléfono:</span>
+               <input type="text" name="update_email" value="+51 999888777" class="box">
+
+               <span>Correo: </span>
+               <input type="email" name="update_name" value="user@gmail.com" class="box">
+
+               <span>Dirección:</span>
+               <input type="text" name="update_email" value="Av.Universitario 423 Maz.4 Lote3 Jr.Programadores 340"
+                  class="box">
+            </div>
+
+            <div class="inputBox">
+               <span>Sexo:</span>
+               <p class="radio-genero">
+                  <input type="radio" name="update_email" class="box">
+                  Masculino
+                  <input type="radio" name="update_email" class="box">
+                  Femenino
+                  <input type="radio" name="update_email" class="box">
+                  No Binario
+               </p>
+
+               <span>Contraseña: </span>
+               <input type="password" name="update_email" value="123456" class="box">
+
+               <span>Confirmar Contraseña: </span>
+               <input type="password" name="update_email" value="123456" class="box">
+
+               <span>Sube Foto Nueva</span>
+               <input type="file" name="update_image" class="box">
+            </div>
+         </div>
+         <input type="submit" value="Actualizar Perfil" name="update_profile" class="btn">
+         <a href="./catalogo.html" class="delete-btn">Volver</a>
+      </form>
+
+   </div>
+
+</body>
+
+</html>
